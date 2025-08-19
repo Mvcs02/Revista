@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revista Digital</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Turn.js CSS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/blasten/turn.js@master/turn.min.js"></script>
+</head>
+<body>
+  <div id="magazine-container">
+    <!-- Portada inicial (solo para mostrar antes de abrir) -->
+    <div id="cover-preview" class="cover-single">
+      <div class="cover-page">
+        <img src="img/portada.jpg" alt="eSports Magazine Cover" class="cover-image">
+        <button id="open-magazine">Open Magazine</button>
+      </div>
+    </div>
+
+    <!-- Revista con Turn.js -->
+    <div id="magazine-wrapper" class="hidden">
+      <div id="flipbook">
+        <!-- Página 1 - PORTADA (centrada, espacio de 1 página) -->
+        <div class="page cover-page-flipbook single-page">
+          <img src="img/portada.jpg" alt="eSports Magazine Cover" class="cover-image-flipbook">
+        </div>
+
+        <!-- Página 2 - ÍNDICE -->
+        <div class="page">
+          <div class="page-content index-page-content">
+            <h2>📋 TABLE OF CONTENTS</h2>
+            <div class="index-scrollable">
+              <div class="index-container">
+                <div class="index-item" data-page="3">
+                  <div class="index-title">�‍💼 Meet the Editor</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 1</div>
+                </div>
+                
+                <div class="index-item" data-page="4">
+                  <div class="index-title">�‍💼 Editor's Complete Profile</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 2</div>
+                </div>
+                
+                <div class="index-item" data-page="5">
+                  <div class="index-title">� Meet Our Reporter</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 3</div>
+                </div>
+                
+                <div class="index-item" data-page="6">
+                  <div class="index-title">� Reporter's Personal Reflection</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 4</div>
+                </div>
+                
+                <div class="index-item" data-page="7">
+                  <div class="index-title">� Meet Our Reporter 2</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 5</div>
+                </div>
+                
+                <div class="index-item" data-page="8">
+                  <div class="index-title">� Ivan's Complete Profile</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 6</div>
+                </div>
+                
+                <div class="index-item" data-page="9">
+                  <div class="index-title">⚽ Cristiano Ronaldo</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 7</div>
+                </div>
+                
+                <div class="index-item" data-page="10">
+                  <div class="index-title">⚽ Cristiano Ronaldo Part 2</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 8</div>
+                </div>
+                
+                <div class="index-item" data-page="11">
+                  <div class="index-title">🏒 Miracle on Ice</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 9</div>
+                </div>
+                
+                <div class="index-item" data-page="12">
+                  <div class="index-title">🏒 Miracle on Ice Part 2</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 10</div>
+                </div>
+                
+                <div class="index-item" data-page="7">
+                  <div class="index-title">⚽ Brazil 1970 Total Football</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 5</div>
+                </div>
+                
+                <div class="index-item" data-page="8">
+                  <div class="index-title">⚽ Brazil 1970 Final Victory</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 6</div>
+                </div>
+                
+                <div class="index-item" data-page="9">
+                  <div class="index-title">🏹 The Arrow That Ignited a Dream</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 7</div>
+                </div>
+                
+                <div class="index-item" data-page="10">
+                  <div class="index-title">🎯 The Moment of Truth</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 8</div>
+                </div>
+                
+                <div class="index-item" data-page="11">
+                  <div class="index-title">🌍 South Africa 2010</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 9</div>
+                </div>
+                
+                <div class="index-item" data-page="12">
+                  <div class="index-title">� South Africa 2010 Part 2</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 10</div>
+                </div>
+                
+                <div class="index-item" data-page="13">
+                  <div class="index-title">🏆 My Best Friend: Lionel Messi</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 11</div>
+                </div>
+                
+                <div class="index-item" data-page="14">
+                  <div class="index-title">🌟 Messi: Beyond Football</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 12</div>
+                </div>
+                
+                <div class="index-item" data-page="15">
+                  <div class="index-title">⚽ Diego Jota</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 13</div>
+                </div>
+                
+                <div class="index-item" data-page="16">
+                  <div class="index-title">⚽ Diego Jota: Professional Career</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 14</div>
+                </div>
+                
+                <div class="index-item" data-page="17">
+                  <div class="index-title">🏆 The Jules Rimet Trophy</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 15</div>
+                </div>
+                
+                <div class="index-item" data-page="18">
+                  <div class="index-title">⚱️ The Trophy's Legacy</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 16</div>
+                </div>
+                
+                <div class="index-item" data-page="19">
+                  <div class="index-title">🤾‍♂️ The Tchoukball Frame</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 17</div>
+                </div>
+                
+                <div class="index-item" data-page="20">
+                  <div class="index-title">⚽ Kael Draven</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 18</div>
+                </div>
+                
+                <div class="index-item" data-page="21">
+                  <div class="index-title">⚽ Kael Draven: Beyond Football</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 19</div>
+                </div>
+                
+                <div class="index-item" data-page="22">
+                  <div class="index-title">🏟️ The Olympic Stadium in Berlin</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 20</div>
+                </div>
+                
+                <div class="index-item" data-page="23">
+                  <div class="index-title">🏟️ My Recommendation</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 21</div>
+                </div>
+                
+                <div class="index-item" data-page="24">
+                  <div class="index-title">⚽ Roberto Carlos</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 22</div>
+                </div>
+                
+                <div class="index-item" data-page="25">
+                  <div class="index-title">⚽ Roberto Carlos: A True Sports Hero</div>
+                  <div class="index-dots"></div>
+                  <div class="index-page">Page 23</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="index-footer">
+              <p><strong>💡 Navigation:</strong></p>
+              <p>• Click any item to jump to page</p>
+              <p>• Use <kbd>←</kbd> <kbd>→</kbd> to flip pages</p>
+              <p>• Press <kbd>ESC</kbd> to close</p>
+            </div>
+          </div>
+          <div class="page-number">INDEX</div>
+        </div>
+
+        <!-- Página 3 - Editor Profile -->
+        <div class="page page-odd">
+          <div class="page-content editor-profile-page">
+            <header class="page-header">
+              <h2>👨‍💼 Meet the Editor</h2>
+              <p class="page-subtitle">Manuel Alejandro Vazquez Hernandez</p>
+            </header>
+            
+            <div class="editor-content">
+              <div class="editor-description">
+                <h3>Personal Philosophy</h3>
+                <p class="description-text">He is a curious person, always eager to learn and grow. He is interested in a wide variety of topics: from technology and entrepreneurship to personal development and animal care. He seeks to learn with purpose and enjoys taking initiative, whether it's building a secure web system, managing a small business, or designing sustainable systems at home. He always strives to improve his own life and the lives of those around him.</p>
+              </div>
+              
+              <div class="editor-image-section">
+                <img src="img/Manuel.jpg" alt="Manuel Alejandro Vazquez Hernandez" class="editor-image">
+              </div>
+              
+              <div class="editor-description">
+                <h3>Health & Personal Development Journey</h3>
+                <p class="description-text">Physically, he is committed to becoming a better version of himself. At the moment, he doesn't feel entirely comfortable with his weight, but he has made the decision to work on it with discipline: he practices calisthenics, follows a calorie-deficit diet, and enjoys green juices that help him stay focused on his health. He is fully aware of the effort this journey requires, yet he firmly trusts that with consistency, he will achieve it.</p>
+              </div>
+            </div>
+          </div>
+          <div class="page-number">1</div>
+        </div>
+
+        <!-- Página 4 - Editor Profile Continued -->
+        <div class="page page-even">
+          <div class="page-content editor-profile-page">
+            <header class="page-header">
+              <h2>👨‍💼 Editor's Profile</h2>
+              <p class="page-subtitle">A Complete Perspective</p>
+            </header>
+            
+            <div class="editor-content">
+              <div class="editor-description">
+                <h3>Personality & Values</h3>
+                <p class="description-text">He is a resilient, thoughtful, and goal-oriented person. His nature combines practicality and analytical thinking with empathy and kindness. He is always willing to help—supporting classmates, developing applications, or simply being there when someone needs him. He feels a deep love for his dog and for the important people in his life. He tries to act with logic, but also with heart.</p>
+                
+                <h3>Professional Passion & Entrepreneurship</h3>
+                <p class="description-text">He is passionate about technology and development, especially working with Node.js, Vue.js, and exploring artificial intelligence. He has an entrepreneurial spirit: he sells food and also helps run a water stand at his university. His hunger for growth drives him to learn a bit of everything: from accounting, to dog training with commands, and even creating sustainable systems at home.</p>
+                
+                <h3>Growth Mindset</h3>
+                <p class="description-text">He enjoys green smoothies, studying new subjects, and even exploring sports betting. He sees himself as someone with great potential, constantly evolving. He is not afraid of making mistakes or asking questions, because he understands that this is how learning happens. He is always striving to improve, not only for himself but also to make a difference in others. With each step, he feels he is building something valuable: skills, knowledge, and a stronger version of himself.</p>
+              </div>
+            </div>
+          </div>
+          <div class="page-number">2</div>
+        </div>
+
+        <!-- Página 5 - Reporter Profile -->
+        <div class="page page-odd">
+          <div class="page-content reporter-profile-page">
+            <header class="page-header">
+              <h2>📰 Meet Our Reporter</h2>
+              <p class="page-subtitle">Carlos Andony Hernandez Lopez</p>
+            </header>
+            
+            <div class="reporter-content">
+              <div class="reporter-description">
+                <h3>Personal & General Information</h3>
+                <p class="description-text">My name is Carlos Andony Hernandez Lopez. I am 21 years old and I live in Villahermosa, Tabasco, in a neighborhood called Gaviotas Sur. I currently live with my uncles, although my parents live in Palenque. I'm studying Software Development (Multiplatform) at university. I don't have a job right now.</p>
+                
+                <h3>Physical Appearance</h3>
+                <p class="description-text">Physically, I'm short, with black hair and black eyes. I have a chubby body. There's nothing really special about my appearance, but I feel fine with how I look.</p>
+                
+                <h3>Personality</h3>
+                <p class="description-text">I'm a friendly and cheerful person. I like to joke around and make people laugh. I'm shy in some situations, and honestly, I'm not a very responsible person. But I always try to be kind to others.</p>
+                
+                <h3>Likes, Skills & Hobbies</h3>
+                <p class="description-text">I enjoy food, music, playing chess, and video games. I can cook, draw, play the guitar, and I'm also good at selling things. In my free time, I like to sleep, scroll through social media, and watch movies. I'm interested in football, cars, and motorcycles.</p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="page-number">3</div>
+        </div>
+
+        <!-- Página 6 - Reporter Profile Continued -->
+        <div class="page page-even">
+          <div class="page-content reporter-profile-page">
+            <header class="page-header">
+              <h2>📰 Reporter's Perspective</h2>
+              <p class="page-subtitle">A Personal Reflection</p>
+            </header>
+            
+            <div class="reporter-content">
+              <div class="reporter-description">
+                <h3>Self-Opinion</h3>
+                <p class="description-text">I consider myself a calm and fun person, although I'm also introverted. I know I'm not perfect, but I like who I am. Maybe I'm not the most hardworking guy, but I'm definitely not a lost cause either.</p>
+              </div>
+              
+              <div class="reporter-image-section">
+                <img src="img/Andony.jpg" alt="Carlos Andony Hernandez Lopez" class="reporter-image">
+              </div>
+            </div>
+          </div>
+          <div class="page-number">4</div>
+        </div>
+
+        <!-- Página 7 - Reporter 2 Profile -->
+        <div class="page page-odd">
+          <div class="page-content reporter2-profile-page">
+            <header class="page-header">
+              <h2>📝 Meet Our Reporter 2</h2>
+              <p class="page-subtitle">Emmanuel Ivan Hernandez Lazaro</p>
+            </header>
+            
+            <div class="reporter2-content">
+              <div class="reporter2-description">
+                <h3>Authentic Style & Presence</h3>
+                <p class="description-text">Iván Hernández is someone who stands out for his authenticity and personal style. From the very beginning, his presence reflects a mix of creativity, simplicity, and originality. He has brown skin, straight black hair, and expressive black eyes. His build is slim, and he's 1.69 meters tall. His clothing style is casual, but he often adds an innovative touch that makes him stand out effortlessly.</p>
+              </div>
+              
+              <div class="reporter2-image-section">
+                <img src="img/Ivan.jpg" alt="Emmanuel Ivan Hernandez Lazaro" class="reporter2-image">
+              </div>
+              
+              <div class="reporter2-description">
+                <h3>Creative & Original Personality</h3>
+                <p class="description-text">Iván is a creative and authentic person with an open mind. He enjoys exploring new ideas and expressing himself freely. He isn't afraid to be different and constantly looks for ways to show his individuality. His relaxed yet confident attitude gives off a strong sense of originality.</p>
+              </div>
+            </div>
+          </div>
+          <div class="page-number">5</div>
+        </div>
+
+        <!-- Página 8 - Reporter 2 Profile Continued -->
+        <div class="page page-even">
+          <div class="page-content reporter2-profile-page">
+            <header class="page-header">
+              <h2>📝 Ivan's Interests & Style</h2>
+              <p class="page-subtitle">A Complete Profile</p>
+            </header>
+            
+            <div class="reporter2-content">
+              <div class="reporter2-description">
+                <h3>Personal Interests</h3>
+                <p class="description-text">Among his interests are watching series, which shows his appreciation for well-told stories. He also enjoys skating, a fun and freeing activity full of energy and balance. His favorite drink is iced coffee, which often accompanies him throughout his day.</p>
+                
+                <h3>Final Impression</h3>
+                <p class="description-text">Iván Hernández is a person with a strong personality, defined interests, and a unique sense of style. The way he carries himself, his hobbies, and his fashion choices make him someone truly memorable.</p>
+              </div>
+            </div>
+          </div>
+          <div class="page-number">6</div>
+        </div>
+
+        <!-- Página 9 - Cristiano Ronaldo -->
+        <div class="page">
+          <div class="page-content cristiano-page">
+            <header class="page-header">
+              <h2>⚽ Cristiano Ronaldo</h2>
+              <p class="page-subtitle">A Football Legend</p>
+            </header>
+            
+            <div class="content-with-image">
+              <div class="image-section">
+                <img src="img/Cristiano.webp" alt="Cristiano Ronaldo" class="cristiano-image">
+                <span class="ribbon legend-ribbon">LEGEND</span>
+                <p class="image-caption">Cristiano Ronaldo - One of the greatest footballers of all time</p>
+              </div>
+              
+              <div class="text-section">
+                <h3>First Impression</h3>
+                <p>The person I admire is Cristiano Ronaldo. The first time I saw him play was in a Manchester United match when he was very young. Since that moment, he caught my attention because of his talent and dedication to football.</p>
+                
+                <div class="stats-box">
+                  <div class="stat-item">
+                    <span class="stat-number">850+</span>
+                    <span class="stat-label">Career Goals</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Ballon d'Or</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            
+            <div class="bottom-section">
+              <div class="elegant-divider"></div>
+              <h3>Physical and Personal Traits</h3>
+              <p>Cristiano Ronaldo is a tall football player with an athletic build and great physical strength. 
+                He has dark hair, a characteristic smile, and an imposing presence on the field. His personality 
+                is defined by discipline, consistency, and a competitive spirit.</p>
+                <br>
+                <p>His personality is defined by discipline, consistency, and a competitive spirit. He always 
+                  strives to be the best, and his daily effort has led him to achieve a level of success that 
+                  few have reached in sports history.</p>
+            </div>
+          </div>
+          <div class="page-number">7</div>
+        </div>
+
+        <!-- Página 10 - Cristiano Ronaldo Continued -->
+        <div class="page page-even">
+          <div class="page-content cristiano-page-2">
+            <div class="continuation-text">
+              <p>Besides playing football professionally, he takes part in charity campaigns and is interested in fitness and fashion. His training routines and healthy lifestyle inspire millions of people.</p>
+              
+              <blockquote class="pull-quote">
+                "Talent without working hard is nothing."
+                <cite>- Cristiano Ronaldo</cite>
+              </blockquote>
+              
+              <p>I admire Cristiano Ronaldo because he represents hard work, passion, and perseverance. He is an example that with effort and determination, dreams can come true.</p>
+            </div>
+            
+            <div class="balon-image-section">
+              <img src="img/CristianoBalon.jpg" alt="Cristiano Ronaldo with Ballon d'Or" class="balon-image">
+            </div>
+          </div>
+          <div class="page-number">8</div>
+        </div>
+
+        <!-- Página 5 - The "Miracle on Ice" -->
+        <div class="page page-odd">
+          <div class="page-content miracle-page">
+            <header class="page-header">
+              <h2>🏒 The "Miracle on Ice"</h2>
+              <p class="page-subtitle">A Tale of Unexpected Heroes</p>
+            </header>
+            
+            <div class="content-with-image">
+              <div class="image-section">
+                <img src="img/Miracle on Ice.jpeg" alt="Miracle on Ice" class="cristiano-image">
+                <span class="ribbon historic-ribbon">HISTORIC</span>
+                <p class="image-caption">The 1980 U.S. Olympic hockey team celebrating their historic victory</p>
+              </div>
+              
+              <div class="text-section">
+                <div class="elegant-divider"></div>
+                <h3>February 22, 1980</h3>
+                <p>On February 22, 1980, at the Winter Olympics in Lake Placid, the world witnessed what became known as the "Miracle on Ice." The United States hockey team, a group of amateurs and college players, faced off against the Soviet Union, the world's hockey powerhouse.</p>
+                
+                <div class="stats-box">
+                  <div class="stat-item">
+                    <span class="stat-number">1980</span>
+                    <span class="stat-label">Olympics</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-number">4-3</span>
+                    <span class="stat-label">Final Score</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bottom-section">
+              <h3>David vs Goliath</h3>
+              <p>This match was more than just a game; it was a clash of David versus Goliath at the heart of the Cold War. The U.S. team trained under coach Herb Brooks, who molded the young players into a cohesive unit. Although they were not expected to compete with the Soviets, their preparation was built on hard work, discipline, and an unshakable belief that they could achieve the impossible.</p>
+            </div>
+          </div>
+          <div class="page-number">3</div>
+        </div>
+
+        <!-- Página 6 - Miracle on Ice Continued -->
+        <div class="page page-even">
+          <div class="page-content miracle-page-2">
+            <div class="continuation-text">
+              <p>The match was an intense battle. The Soviet Union took the lead, but the American team refused to give up. With decisive goals from Mark Johnson and Mike Eruzione, they pulled ahead 4-3. The final minute of the game, with the announcer shouting "Do you believe in miracles?!" sealed a historic victory that sparked unexpected euphoria across the country.</p>
+              
+              <div class="timeline-section">
+                <h4>Game Timeline</h4>
+                <div class="mini-timeline">
+                  <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <span class="timeline-time">1st Period</span>
+                      <span class="timeline-event">USSR takes lead</span>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <span class="timeline-time">2nd Period</span>
+                      <span class="timeline-event">USA fights back</span>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <span class="timeline-time">3rd Period</span>
+                      <span class="timeline-event">4-3 Victory!</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <p>The "Miracle on Ice" became a symbol of hope and perseverance. Beyond the result, it proved that with team spirit and self-belief, dreams can come true even when the odds are against you. It remains one of the greatest upsets in sports history.</p>
+            </div>
+          </div>
+          <div class="page-number">4</div>
+        </div>
+
+        <!-- Página 7 - Brazil 1970 Total Football -->
+        <div class="page page-odd">
+          <div class="page-content brazil-page">
+            <header class="page-header">
+              <h2>⚽ The Masterpiece of "Total Football"</h2>
+              <p class="page-subtitle">Brazil 1970</p>
+            </header>
+            
+            <div class="content-with-image">
+              <div class="image-section">
+                <div class="brazil-stars main-stars">
+                  <h4>⭐ The Golden Squad</h4>
+                  <div class="stars-list">
+                    <span class="star-player">Pelé</span>
+                    <span class="star-player">Jairzinho</span>
+                    <span class="star-player">Tostão</span>
+                    <span class="star-player">Rivelino</span>
+                    <span class="star-player">Carlos Alberto</span>
+                  </div>
+                </div>
+                <span class="ribbon masterpiece-ribbon">MASTERPIECE</span>
+                <p class="image-caption">The legendary stars of Brazil's 1970 World Cup triumph</p>
+              </div>
+              
+              <div class="text-section">
+                <h3>June 21, 1970</h3>
+                <p>The 1970 World Cup final in Mexico is remembered as one of the greatest in history. On June 21, Brazil and Italy clashed at the Azteca Stadium in a match that cemented Brazil's "total football" as a form of art.</p>
+              </div>
+            </div>
+            
+            <div class="bottom-section">
+              <h3>The Art of Football</h3>
+              <p>The reason for its legendary status was the beauty of their attacking play, a performance that elevated the sport to another level. The Brazilian team, led by Pelé, prepared not only to win but to dazzle.</p>
+              
+              <p>Under the direction of Mário Zagallo, the team was a constellation of stars who moved with unmatched fluidity and creativity. Their preparation focused on building a side capable of dismantling any opponent with quick passes and unpredictable movements.</p>
+            </div>
+          </div>
+          <div class="page-number">5</div>
+        </div>
+
+        <!-- Página 8 - Brazil 1970 Continued -->
+        <div class="page page-even">
+          <div class="page-content brazil-page-2">
+            <div class="continuation-text">
+              <p>The final was a spectacle. Although Italy had a strong defense, Brazil's attack was unstoppable. Pelé scored the first goal, and though Italy equalized, the second half became a showcase of Brazilian power.</p>
+              
+                <div class="brazil-image-section">
+                  <img src="img/BrazilTeam.webp" alt="Brazil 1970 World Cup Team" class="brazil-team-image">
+                  <p class="image-caption">The legendary Brazil 1970 World Cup winning team</p>
+                </div>
+              
+              <p>With goals from Gérson and Jairzinho, and a legendary final strike by Carlos Alberto after a perfect team play, Brazil sealed a 4-1 victory, winning their third title and keeping the trophy.</p>
+              
+              <p>Brazil's 1970 triumph was a victory for football itself. Their <em>jogo bonito</em> captivated the world and became the benchmark of excellence - pure beauty and art in sport.</p>
+            </div>
+          </div>
+          <div class="page-number">6</div>
+        </div>
+
+        <!-- Página 9 - The Arrow That Ignited a Dream (Barcelona 1992) -->
+        <div class="page page-odd">
+          <div class="page-content barcelona-page">
+            <!-- Diseño innovador con fondo artístico -->
+            <div class="artistic-background"></div>
+            
+            <!-- Título con efecto de flecha -->
+            <div class="arrow-title-section">
+              <div class="olympic-rings-mini">
+                <div class="ring ring-blue"></div>
+                <div class="ring ring-yellow"></div>
+                <div class="ring ring-black"></div>
+                <div class="ring ring-green"></div>
+                <div class="ring ring-red"></div>
+              </div>
+              <h2 class="arrow-title">🏹 The Arrow That Ignited a Dream</h2>
+              <div class="barcelona-subtitle">
+                <span class="olympic-year">Barcelona</span>
+                <span class="year-highlight">1992</span>
+              </div>
+            </div>
+            
+            <!-- Contenido en diseño de zigzag -->
+            <div class="zigzag-content">
+              <div class="content-block left-block">
+                <div class="flame-icon">🔥</div>
+                <p>The opening ceremony of the 1992 Barcelona Olympic Games was not only the beginning of a sporting event but also the celebration of a city opening itself to the world.</p>
+              </div>
+              
+              <div class="content-block right-block">
+                <div class="date-badge">
+                  <span class="month">JULY</span>
+                  <span class="day">25</span>
+                </div>
+                <p>On July 25, millions of viewers witnessed a spectacle that combined Catalan cultural tradition with modernity. The most memorable moment, forever etched in history, was the lighting of the Olympic cauldron.</p>
+              </div>
+              
+              <div class="content-block left-block">
+                <div class="magic-icon">✨</div>
+                <p>An act that symbolized the magic and innovation of the Games. The ceremony was the result of years of preparation, with thousands of volunteers and artists rehearsing for a performance that had to be flawless.</p>
+              </div>
+            </div>
+            
+            <!-- Decoración de flecha en la esquina -->
+            <div class="corner-arrow">→</div>
+          </div>
+          <div class="page-number">7</div>
+        </div>
+
+        <!-- Página 10 - Barcelona 1992 Continuation (Direct continuation of page 9) -->
+        <div class="page page-even">
+          <div class="page-content barcelona-continuation-page">
+            
+            <!-- Contenido continuo sin encabezado -->
+            <div class="continuation-content">
+              <p>Preparations included the creation of elaborate sets and choreographies celebrating Spanish culture. The greatest anticipation, however, centered on how the cauldron would be lit—a closely guarded secret that generated immense excitement.</p>
+              
+              <!-- Sección con diseño circular para el momento climático -->
+              <div class="preparation-circle">
+                <div class="circle-content">
+                  <div class="center-icon">🎭</div>
+                  <div class="circle-text">
+                    <p>The event was filled with color and music. The parade of athletes blended with performances honoring Spain's history. But the climax arrived with the lighting of the cauldron.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="arrow-story">
+                <h3>🏹 The Perfect Shot</h3>
+                <p>Paralympic archer Antonio Rebollo took the stage and, with a flaming arrow, aimed toward the cauldron high above the stadium. With a shot that seemed impossible, the arrow soared through the air, appearing to ignite the Olympic flame.</p>
+                
+                <blockquote class="olympic-quote">
+                  "The gesture was a triumph of technology and symbolism, a moment of pure emotion."
+                </blockquote>
+                
+                <p>The 1992 Barcelona ceremony was not just a spectacle but an act of faith. Rebollo's arrow became a symbol of precision, determination, and the ability to transcend limits. The event showed how a ceremony can go beyond sport to become a moment of art and poetry, inspiring generations to reach for the impossible.</p>
+              </div>
+            </div>
+          </div>
+          <div class="page-number">8</div>
+        </div>
+
+        <!-- Página 11 - South Africa 2010 -->
+        <div class="page page-odd">
+          <div class="page-content south-africa-page">
+            <div class="african-header">
+              <div class="african-flag-colors">
+                <div class="flag-stripe stripe-red"></div>
+                <div class="flag-stripe stripe-orange"></div>
+                <div class="flag-stripe stripe-yellow"></div>
+                <div class="flag-stripe stripe-green"></div>
+                <div class="flag-stripe stripe-blue"></div>
+                <div class="flag-stripe stripe-black"></div>
+              </div>
+              <h2 class="african-title">South Africa 2010</h2>
+              <div class="african-date">June 11, 2010</div>
+            </div>
+            
+            <div class="african-content">
+              <p class="opening-paragraph">
+                The 2010 FIFA World Cup opening ceremony in South Africa was a spectacular celebration of African heritage and culture. Held at Soccer City in Johannesburg, this historic event marked the first World Cup hosted on African soil.
+              </p>
+              
+              <div class="culture-showcase">
+                <div class="culture-title">Vibrant Cultural Celebration</div>
+                <p class="culture-text">
+                  Thousands of dancers and musicians took center stage, showcasing Africa's diverse heritage through traditional performances, contemporary music, and breathtaking choreography.
+                </p>
+              </div>
+              
+              <div class="african-elements">
+                <div class="element-badge">
+                  <span class="element-icon">🥁</span>
+                  <span class="element-text">Traditional<br>Drums</span>
+                  <div class="tooltip">Ancient rhythms that have echoed across Africa for centuries, carrying stories and connecting communities through powerful beats</div>
+                </div>
+                <div class="element-badge">
+                  <span class="element-icon">💃</span>
+                  <span class="element-text">Cultural<br>Dance</span>
+                  <div class="tooltip">Expressive movements that tell the rich history of African tribes, celebrating life, harvest, and spiritual connections</div>
+                </div>
+                <div class="element-badge">
+                  <span class="element-icon">🎵</span>
+                  <span class="element-text">African<br>Music</span>
+                  <div class="tooltip">Melodious harmonies blending traditional instruments with contemporary sounds, representing Africa's diverse musical heritage</div>
+                </div>
+                <div class="element-badge">
+                  <span class="element-icon">🌍</span>
+                  <span class="element-text">Ubuntu<br>Spirit</span>
+                  <div class="tooltip">"I am because we are" - The African philosophy emphasizing humanity, compassion, and interconnectedness of all people</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-number">9</div>
+        </div>
+
+        <!-- Página 12 - South Africa 2010 Continuation -->
+        <div class="page page-even">
+          <div class="page-content south-africa-page">
+            <div class="ceremony-content">
+              <div class="festival-section">
+                <p class="ceremony-paragraph">
+                  The ceremony was a festival of color and energy. The stadium came alive with kwaito rhythms and traditional dances. The figure of the "robotic animal" symbolized the evolution of life in Africa, while performances by local artist Thandiswa Mazwai and American singer R. Kelly lifted the spirit of the crowd.
+                </p>
+              </div>
+              
+              <div class="atmosphere-showcase">
+                <div class="sound-elements">
+                  <div class="sound-badge">
+                    <span class="sound-icon">🥁</span>
+                    <span class="sound-label">Drums</span>
+                  </div>
+                  <div class="sound-badge">
+                    <span class="sound-icon">🎺</span>
+                    <span class="sound-label">Vuvuzelas</span>
+                  </div>
+                  <div class="sound-badge">
+                    <span class="sound-icon">🎵</span>
+                    <span class="sound-label">Music</span>
+                  </div>
+                </div>
+                <p class="atmosphere-text">
+                  Music, drums, and vuvuzelas filled the air, creating a festive atmosphere that united people in one celebration of national pride.
+                </p>
+              </div>
+              
+              <div class="dream-fulfillment">
+                <div class="dream-header">
+                  <span class="star-icon">⭐</span>
+                  <h3>A Dream Fulfilled</h3>
+                </div>
+                <p class="dream-paragraph">
+                  The 2010 South Africa ceremony was not only the start of a tournament but the fulfillment of a dream. The event carried a powerful message of unity, progress, and resilience.
+                </p>
+                
+                <div class="unity-message">
+                  <div class="message-content">
+                    <p>The joy and warmth of the South African people shone through every moment, proving to the world that Africa was ready to host a global event with grace and enthusiasm.</p>
+                  </div>
+                </div>
+                
+                <div class="south-africa-image-section">
+                  <img src="img/Brazil2010.webp" alt="South Africa 2010 World Cup Ceremony" class="brazil2010-image">
+                  <p class="sa-image-caption">The spectacular opening ceremony that showcased African culture to the world</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-number">10</div>
+        </div>
+
+        <!-- Página 13 - My Best Friend: Lionel Messi -->
+        <div class="page page-odd">
+          <div class="page-content">
+            <header class="page-header">
+              <h2>🏆 My Best Friend: Lionel Messi</h2>
+              <p class="page-subtitle">The GOAT - Greatest of All Time</p>
+            </header>
+            
+            <div class="messi-content">
+              <div class="messi-image-section">
+                <img src="img/messi.png" alt="Lionel Messi" class="messi-image">
+                <div class="messi-quote">
+                  <p class="quote-text">"Football is my passion, my life"</p>
+                  <p class="quote-author">- Lionel Messi</p>
+                </div>
+              </div>
+              
+              <div class="messi-text">
+                <p class="intro-text">My best friend is <strong>Lionel Messi</strong>. The first time I saw him play was in an FC Barcelona match when he was still very young. From that moment, I was impressed by his way of playing and the passion he shows for football.</p>
+                
+                <div class="messi-description">
+                  <h3>Physical Description</h3>
+                  <p>Messi is relatively short but has great agility and speed. He has light brown hair, clear eyes, and a simple smile that reflects humility.</p>
+                </div>
+                
+                <div class="messi-personality">
+                  <h3>Personality</h3>
+                  <p>His personality is characterized by humility, simplicity, and dedication. Although he is considered one of the best players in the world, he remains humble.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-number">11</div>
+        </div>
+
+        <!-- Página 14 - Messi Continuation -->
+        <div class="page page-even">
+          <div class="page-content">
+            <header class="page-header">
+              <h2>🌟 Messi: Beyond Football</h2>
+              <p class="page-subtitle">My Inspiration and Role Model</p>
+            </header>
+            
+            <div class="messi-continuation">
+              <div class="messi-activities">
+                <h3>🏠 Life Beyond Football</h3>
+                <p>Besides playing football, he enjoys spending time with his family and takes part in charitable activities through his foundation. He is interested in helping children and promoting sports as a way of self-improvement.</p>
+              </div>
+              
+              <div class="messi-inspiration">
+                <h3>💖 My Admiration</h3>
+                <p>I admire Lionel Messi because he represents humility, talent, and passion for what he does. For me, he is like a best friend who inspires others to fight for their dreams with simplicity and effort.</p>
+              </div>
+              
+              <div class="messi-final-image">
+                <img src="img/messiamigo.jpg" alt="Messi with friends" class="messiamigo-image">
+                <p class="image-caption">Messi: More than a player, a true friend and inspiration</p>
+              </div>
+            </div>
+          </div>
+          <div class="page-number">12</div>
+        </div>
+
+        <!-- Página 15 - Diego Jota Tribute -->
+        <div class="page page-odd">
+          <div class="page-content">
+            <header class="page-header">
+              <h2>⚽ Diego Jota</h2>
+              <p class="page-subtitle">A Portuguese Star We Remember</p>
+            </header>
+            
+            <div class="jota-content">
+              <div class="jota-intro">
+                <p class="intro-text">Diego Jota was a Portuguese football player well known in Europe. I first saw him play when he was at Wolverhampton in the Premier League, where he began to stand out with his goals and decisive performances.</p>
+              </div>
+              
+              <div class="jota-description">
+                <h3>Physical Description & Style</h3>
+                <p>He was a player of medium height, slim but strong, with great speed and skill to move through defenders. His short brown hair and his style on the field made him easily recognizable.</p>
+              </div>
+              
+              <div class="jota-tribute">
+                <div class="tribute-box">
+                  <div class="tribute-icon">🌟</div>
+                  <h3>A Player to Remember</h3>
+                  <p>Diego Jota's impact on Portuguese football and his memorable performances in the Premier League will always be remembered by fans who witnessed his talent and dedication on the field.</p>
+                </div>
+              </div>
+              
+              <div class="jota-stats">
+                <h3>Career Highlights</h3>
+                <ul class="stats-list">
+                  <li>🏴󠁧󠁢󠁥󠁮󠁧󠁿 <strong>Premier League:</strong> Wolverhampton Wanderers</li>
+                  <li>🇵🇹 <strong>Nationality:</strong> Portuguese</li>
+                  <li>⚽ <strong>Position:</strong> Forward/Winger</li>
+                  <li>🎯 <strong>Known for:</strong> Goals and decisive performances</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="page-number">13</div>
+        </div>
+
+        <!-- Página 16 - Diego Jota: Professional Career -->
+        <div class="page page-even">
+          <div class="page-content">            
+            <div class="jota-career">
+              <div class="jota-personality">
+                <h3>🏆 Character & Work Ethic</h3>
+                <p>He was known for being hardworking, competitive, and always focused on fulfilling his role within the team.</p>
+              </div>
+              
+              <div class="jota-clubs">
+                <h3>🏟️ Professional Journey</h3>
+                <p>During his professional career, he played for important clubs such as Paços de Ferreira, Atlético Madrid, Porto, Wolverhampton, and Liverpool. He was also part of the Portuguese national team, playing in major international tournaments.</p>
+                
+                <div class="clubs-list">
+                  <div class="club-item">🇵🇹 <strong>Paços de Ferreira</strong> - Early career</div>
+                  <div class="club-item">🇪🇸 <strong>Atlético Madrid</strong> - La Liga experience</div>
+                  <div class="club-item">🇵🇹 <strong>Porto</strong> - Portuguese giants</div>
+                  <div class="club-item">🏴󠁧󠁢󠁥󠁮󠁧󠁿 <strong>Wolverhampton</strong> - Premier League breakthrough</div>
+                  <div class="club-item">🏴󠁧󠁢󠁥󠁮󠁧󠁿 <strong>Liverpool</strong> - Elite level football</div>
+                </div>
+              </div>
+              
+              <div class="jota-image-section">
+                <img src="img/DiegoJota.jpg" alt="Diego Jota" class="diego-jota-image">
+              </div>
+              
+              <div class="jota-legacy">
+                <h3>⭐ Lasting Impact</h3>
+                <p>His career left a mark on every team he played for, and he will be remembered as a talented player who gave effort and quality in every match.</p>
+                
+                <div class="legacy-tribute">
+                  <div class="tribute-message">
+                    "A true professional who exemplified dedication, skill, and the Portuguese fighting spirit on every pitch he graced."
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-number">14</div>
+        </div>
+
+        <!-- Página 17 - The Jules Rimet Trophy -->
+        <div class="page page-odd">
+          <div class="page-content">
+            <header class="page-header">
+              <h2>🏆 The Jules Rimet Trophy</h2>
+              <p class="page-subtitle">Football's Lost Treasure</p>
+            </header>
+            
+            <div class="trophy-content">
+              <div class="trophy-intro-section">
+                <img src="img/trofeo.jpg" alt="Jules Rimet Trophy" class="trophy-image">
+                <div class="trophy-intro-text">
+                  <p>The Jules Rimet Trophy, the original FIFA World Cup prize, disappeared in December 1983 from the headquarters of the Brazilian Football Confederation in Rio de Janeiro, Brazil.</p>
+                </div>
+              </div>
+              
+              <div class="trophy-story">
+                
+                <div class="trophy-mystery">
+                  <h3>🔍 The Great Mystery</h3>
+                  <p>This was the second theft of the trophy, but unlike the first in 1966, it was never recovered, becoming one of the greatest and most painful mysteries in football history.</p>
+                </div>
+                
+                <div class="trophy-legacy">
+                  <div class="mystery-box">
+                    <div class="mystery-icon">❓</div>
+                    <p class="mystery-text">To this day, the whereabouts of this precious piece of football history remains unknown, leaving fans and historians wondering what happened to this legendary trophy.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-number">15</div>
+        </div>
+
+        <!-- Página 18 - Jules Rimet Trophy: The Legend Lives On -->
+        <div class="page page-even">
+          <div class="page-content">
+            <header class="page-header">
+              <h2>⚱️ The Trophy's Legacy</h2>
+              <p class="page-subtitle">A Golden Legend Lost Forever</p>
+            </header>
+            
+            <div class="trophy-details">
+              <div class="trophy-specifications">
+                <h3>🏆 Trophy Details</h3>
+                <p>The trophy was an impressive solid gold figure, 35 cm tall and weighing 3.8 kg, representing the Greek goddess of victory, Nike, holding an octagonal cup. Its smooth, gleaming form symbolized the ultimate glory in world football since 1930.</p>
+                
+                <div class="specs-box">
+                  <div class="spec-item">📏 <strong>Height:</strong> 35 cm</div>
+                  <div class="spec-item">⚖️ <strong>Weight:</strong> 3.8 kg</div>
+                  <div class="spec-item">🥇 <strong>Material:</strong> Solid Gold</div>
+                  <div class="spec-item">👑 <strong>Design:</strong> Nike holding cup</div>
+                </div>
+              </div>
+              
+              <div class="trophy-honor">
+                <h3>🎖️ Special Distinction</h3>
+                <p>It was named in honor of Jules Rimet, the former FIFA president, and had the special distinction of being awarded permanently to the first country to win the tournament three times.</p>
+              </div>
+              
+              <div class="trophy-conclusion">
+                <h3>💔 A Sad Legacy</h3>
+                <p>The loss of the Jules Rimet Trophy is one of the saddest stories in sports. Although it has been replaced by the current FIFA World Cup trophy, the legend of the original cup and its disappearance continues to fascinate and sadden fans around the world.</p>
+                
+                <div class="final-reflection">
+                  <p>Its story serves as a reminder that some of the most valuable objects are those that embody history and collective memory—and once they are lost, they become part of legend.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-number">16</div>
+        </div>
+
+        <!-- Página 19 - The Tchoukball Frame -->
+        <div class="page page-odd">
+          <div class="page-content">
+            <header class="page-header">
+              <h2>🤾‍♂️ The Tchoukball Frame</h2>
+              <p class="page-subtitle">The Goal That Defies Logic</p>
+            </header>
+            
+            <div class="tchoukball-content">
+              <div class="tchoukball-intro-section">
+                <img src="img/porteria.webp" alt="Tchoukball Frame" class="tchoukball-image">
+                <div class="tchoukball-intro-text">
+                  <p>At first glance, this object looks unusual, yet it is the centerpiece of Tchoukball. It resembles a small trampoline, with a net stretched over a metal frame set at a 55-degree angle.</p>
+                </div>
+              </div>
+              
+              <div class="tchoukball-description">
+                <h3>🎯 Unique Design</h3>
+                <p>Its unique design is neither a traditional goal nor a basket, but rather a rebounding surface.</p>
+                
+                <div class="curious-facts">
+                  <div class="fact-item">
+                    <div class="fact-icon">📐</div>
+                    <div class="fact-text">
+                      <strong>55° Angle:</strong> Perfect for rebounding the ball back to players
+                    </div>
+                  </div>
+                  
+                  <div class="fact-item">
+                    <div class="fact-icon">🏀</div>
+                    <div class="fact-text">
+                      <strong>Not a Goal:</strong> Players score by making the ball bounce off this surface
+                    </div>
+                  </div>
+                  
+                  <div class="fact-item">
+                    <div class="fact-icon">🤸‍♂️</div>
+                    <div class="fact-text">
+                      <strong>Trampoline-like:</strong> The net creates a unique bouncing effect
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="curious-highlight">
+                  <div class="highlight-icon">❓</div>
+                  <p class="highlight-text">This strange-looking object challenges everything we know about traditional sports equipment, proving that innovation can create entirely new ways to play!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-number">17</div>
+        </div>
+
+        <!-- Página 20 - Kael Draven -->
+        <div class="page page-even">
+          <div class="page-content kael-page">
+            <header class="page-header compact-header">
+              <h2>⚽ Kael Draven</h2>
+              <p class="page-subtitle">Rising Star of the Future</p>
+            </header>
+            
+            <div class="kael-compact-design">
+              <div class="kael-header-section">
+                <div class="kael-image-container">
+                  <img src="img/elbicho.jpg" alt="Kael Draven" class="kael-image-full">
+                  <span class="ribbon future-star-ribbon">FUTURE STAR</span>
+                </div>
+                
+                <div class="kael-info-panel">
+                  <h3>First Impression</h3>
+                  <p class="main-description">The person I am going to describe is Kael Draven, a young footballer I first saw during an international youth tournament two years ago. His name quickly caught my attention because it was mentioned by many coaches as a rising star of the future.</p>
+                  
+                  <div class="kael-highlights">
+                    <span class="highlight-item">⚽ Youth International</span>
+                    <span class="highlight-item">🌟 Rising Star</span>
+                    <span class="highlight-item">🏆 Tournament Standout</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="kael-description-section">
+                <p class="physical-description">Kael is tall and lean, with a height of about 1.85 meters. He has dark brown hair that he usually keeps messy, giving him a casual look. His sharp green eyes and athletic body make him stand out immediately on the field. He often wears a silver bracelet on his left wrist, a gift from his grandmother, which he considers his lucky charm.</p>
+              </div>
+              
+              <div class="kael-personality-section">
+                <p class="personality-description">Kael is highly disciplined, focused, and humble despite his growing fame. What impressed me most is his ability to stay calm under pressure. While many players show frustration, he always smiles and motivates his teammates. This shows that he values teamwork more than personal glory, which is why coaches often choose him as captain.</p>
+              </div>
+              
+              <div class="kael-quote-section">
+                <div class="quote-content">
+                  <p>"His talent is undeniable, and his dedication is what sets him apart."</p>
+                  <span class="quote-author">- Youth Coach</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-number">18</div>
+        </div>
+
+        <!-- Página 21 - Kael Activities & Conclusion -->
+        <div class="page page-odd">
+          <div class="page-content kael-page-21">
+            <header class="page-header compact-header">
+              <h2>⚽ Kael Draven</h2>
+              <p class="page-subtitle">Beyond Football</p>
+            </header>
+            
+            <div class="kael-activities-design">
+              <div class="kael-activities-section">
+                <h3>Activities, Hobbies & Interests:</h3>
+                <p class="activities-description">Apart from football, Kael loves painting landscapes, a hobby he developed to relax his mind after training. He also enjoys reading books about astronomy, and sometimes he organizes stargazing nights with his friends. On weekends, he volunteers at a local children's hospital, playing football with young patients to inspire them.</p>
+              </div>
+              
+              <div class="kael-conclusion-section">
+                <p class="conclusion-description">In my opinion, Kael Drayden is not only a promising athlete but also an admirable person. His unique combination of talent, kindness, and curiosity about the world makes him someone truly special. I feel grateful to have seen him play live, and I am sure that in the future, he will inspire millions of people, both on and off the field.</p>
+              </div>
+              
+              <div class="kael-image-section">
+                <img src="img/kael.jpg" alt="Kael Draven" class="kael-main-image">
+              </div>
+            </div>
+          </div>
+          <div class="page-number">19</div>
+        </div>
+
+        <!-- Página 22 - Olympic Stadium Berlin -->
+        <div class="page page-even">
+          <div class="page-content olympic-stadium-page">
+            <header class="page-header">
+              <h2>🏟️ The Olympic Stadium in Berlin</h2>
+              <p class="page-subtitle">A Historic Sports Venue</p>
+            </header>
+            
+            <div class="stadium-content">
+              <div class="stadium-description">
+                <h3>Location & Significance</h3>
+                <p class="description-text">The Olympic Stadium in Berlin is located in Germany's capital city. It is one of the most iconic sports venues in the world. I chose this place because it combines a rich history, impressive architecture, and world-class sporting events. It also represents how a place can transform over time.</p>
+                
+                <h3>Historical Background</h3>
+                <p class="description-text">This stadium was originally built for the 1936 Olympic Games and has been renovated several times since then.</p>
+              </div>
+              
+              <div class="stadium-image-section">
+                <img src="img/stadium.webp" alt="Olympic Stadium in Berlin" class="stadium-image">
+              </div>
+            </div>
+          </div>
+          <div class="page-number">20</div>
+        </div>
+
+        <!-- Página 23 - Olympic Stadium Recommendation -->
+        <div class="page page-odd">
+          <div class="page-content olympic-stadium-page">
+            <header class="page-header">
+              <h2>🏟️ My Recommendation</h2>
+              <p class="page-subtitle">A Personal Perspective</p>
+            </header>
+            
+            <div class="stadium-content">
+              <div class="stadium-description">
+                <h3>Final Thoughts</h3>
+                <p class="description-text">Visiting the Olympic Stadium in Berlin is an unforgettable experience, especially if you are interested in sports, history, or architecture. I highly recommend this place for its historical significance and the quality of the experiences it offers. It is definitely a site that leaves a lasting impression.</p>
+              </div>
+              <div class="stadium-image-section">
+                <img src="img/stadium2.jpg" alt="Olympic Stadium in Berlin" class="stadium-image">
+              </div>
+            </div>
+          </div>
+          <div class="page-number">21</div>
+        </div>
+
+        <!-- Página 24 - Roberto Carlos -->
+        <div class="page page-even">
+          <div class="page-content roberto-carlos-page">
+            <header class="page-header">
+              <h2>⚽ Roberto Carlos</h2>
+              <p class="page-subtitle">My Personal Football Hero</p>
+            </header>
+            
+            <div class="roberto-content">
+              <div class="roberto-description">
+                <h3>A Legendary Figure</h3>
+                <p class="description-text">Roberto Carlos, one of the most legendary footballers in history, is a figure I came to know through his incredible feats on the pitch, especially during his golden era with Real Madrid and the Brazilian national team in the 1990s and early 2000s. His impact transcended football, making him a global icon.</p>
+                
+                <h3>Physical Presence</h3>
+                <p class="description-text">Standing at 1.68 meters, Roberto Carlos was not the tallest player, but his physique was extraordinarily strong and muscular, which allowed him to be an unstoppable force on the field. His legs, in particular, were remarkably powerful—the source of his iconic free kicks. He had curly hair and a smile that often lit up his face, reflecting the joy he felt when playing.</p>
+              </div>
+              
+              <div class="roberto-image-section">
+                <img src="img/Roberto.jpg" alt="Roberto Carlos" class="roberto-image">
+                <img src="img/Roberto2.jpg" alt="Roberto Carlos" class="roberto-image">
+              </div>
+            </div>
+          </div>
+          <div class="page-number">22</div>
+        </div>
+
+        <!-- Página 25 - Roberto Carlos Continued -->
+        <div class="page page-odd">
+          <div class="page-content roberto-carlos-page">
+            <header class="page-header">
+              <h2>⚽ Roberto Carlos</h2>
+              <p class="page-subtitle">A True Sports Hero</p>
+            </header>
+            
+            <div class="roberto-content-extended">
+              <div class="roberto-text-sections">
+                <div class="roberto-section">
+                  <h3>Personality & Character</h3>
+                  <p class="description-text">Roberto Carlos's personality is that of a tireless and charismatic hero. He demonstrated remarkable perseverance, always willing to run from one end of the field to the other to defend and attack. I justify this with his famous work ethic and his ability to never give up, even in the toughest matches. Furthermore, his humility and positivity made him beloved by teammates and fans all around the world.</p>
+                </div>
+                
+                <div class="roberto-section">
+                  <h3>Skills & Activities</h3>
+                  <p class="description-text">As a sports hero, Roberto Carlos excelled in activities related to football. His main role, of course, was playing as a left back, a position he redefined with his attacking style. His hobbies and interests included perfecting his free kicks—renowned for their power and "curve" effect—and taking part in charity work, using his fame to help others.</p>
+                </div>
+                
+                <div class="roberto-section">
+                  <h3>My Final Thoughts</h3>
+                  <p class="description-text">My feelings and comments about Roberto Carlos are those of admiration and respect. He is a true hero not only because of his achievements on the pitch but also because of the way he inspired a generation of footballers and fans. His legacy goes beyond titles, residing in the passion, effort, and joy he brought to the sport. He is an unforgettable figure who proved that talent, combined with hard work, can turn an individual into a legend.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-number">23</div>
+        </div>
+
+        <!-- Página 26 - CONTRAPORTADA -->
+        <div class="page back-cover-page single-page">
+          <img src="img/contraportada.jpg" alt="Back Cover" class="back-cover-image">
+        </div>
+      </div>
+
+      <!-- Controles mejorados - Barra inferior unificada -->
+      <div id="controls">
+        <button id="prev-page" class="nav-btn">
+          <span class="arrow">←</span>
+          <span class="text">Anterior</span>
+        </button>
+        
+        <div id="index-control">
+          <button id="goto-index" class="index-btn">
+            📋 Índice
+          </button>
+        </div>
+        
+        <div id="page-info">
+          <span id="current-page">1</span>
+          <span class="separator">/</span>
+          <span id="total-pages">26</span>
+        </div>
+        
+        <button id="next-page" class="nav-btn">
+          <span class="text">Siguiente</span>
+          <span class="arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
